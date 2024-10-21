@@ -1,0 +1,64 @@
+/* Research.css */
+.research {
+  background: linear-gradient(to bottom right, #ffffff, #87ceeb); /* Gradient background */
+  padding: 40px 0;
+  text-align: center;
+}
+
+.research h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.research p {
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
+.research-cards {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the top */
+  flex-wrap: wrap;
+  position: relative; /* To position pseudo-elements */
+}
+
+.research .card {
+  background-color: #cff5ff;
+  border-radius: 10px; /* Increased border-radius for a softer look */
+  padding: 20px;
+  margin: 20px; /* Increased margin for spacing */
+  flex: 1 1 300px; /* Flex basis for larger card sizes */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+  position: relative; /* Allows positioning for animations */
+  transition: transform 0.3s; /* Smooth scaling on hover */
+}
+
+/* Card image styling */
+.card-image {
+  width: 100px; /* Set a fixed width for images */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px; /* Space between image and text */
+}
+
+/* Card hover effect */
+.research .card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Line effect */
+.research-cards::before {
+  content: '';
+  position: absolute;
+  top: 50%; /* Center the line vertically */
+  left: 50%; /* Center the line horizontally */
+  width: 2px; /* Width of the line */
+  height: 100%; /* Height of the line */
+  background-color: #cccccc; /* Line color */
+  transform: translate(-50%, -50%); /* Center the line */
+  z-index: 0; /* Behind the cards */
+}
+
+.research .card {
+  z-index: 1; /* Bring cards above the line */
+}

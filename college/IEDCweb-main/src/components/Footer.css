@@ -1,0 +1,42 @@
+/* Footer gradient background */
+footer {
+  background: linear-gradient(to right, #0810ff, #00004d);
+
+
+  color: #f0f0f0;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.container1 {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Align horizontally */
+  gap: 20px; /* Add spacing between icons */
+}
+
+.social-links li {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.social-links li:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.social-links img {
+  width: 40px;
+  height: 40px;
+}
+
+@media (max-width: 768px) {
+  .social-links {
+    flex-direction: row; /* Keep icons in a row on smaller screens */
+  }
+}

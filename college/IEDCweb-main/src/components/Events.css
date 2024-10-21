@@ -1,0 +1,81 @@
+.events {
+    background: linear-gradient(to bottom right, #f0f8ff, #add8e6); /* Gradient background */
+    padding: 60px 20px; /* Increased padding */
+    text-align: center;
+}
+
+.events h2 {
+    font-size: 2.5rem; /* Larger font size */
+    margin-bottom: 20px;
+    color: #2a3a4c; /* Darker text color */
+}
+
+.events p {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-size: 1.2rem; /* Increased font size */
+    line-height: 1.6; /* Better line height for readability */
+    color: #555; /* Softer text color */
+}
+
+.events-cards {
+    display: flex;
+    justify-content: space-between; /* Distribute space evenly between cards */
+    align-items: stretch; /* Stretch cards to the same height */
+    flex-wrap: nowrap; /* Prevent wrapping to a new row */
+}
+
+.events .card {
+    background-color: #ffffff; /* White background for cards */
+    border-radius: 12px; /* Slightly more rounded corners */
+    padding: 20px;
+    margin: 0 10px; /* Horizontal margin */
+    flex: 0 1 22%; /* Set each card to take about 22% of the container's width */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+    overflow: hidden; /* To hide overflow from pseudo-elements */
+    height: 300px; /* Fixed height for uniformity */
+}
+
+/* Card image styling */
+.card-image {
+    width: 100px; /* Consistent image width */
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* Card hover effect */
+.events .card:hover {
+    transform: translateY(-5px) scale(1.05); /* Scale effect on hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
+}
+
+.events .card h3 {
+    margin: 10px 0; /* Consistent heading margin */
+}
+
+.events .card p {
+    flex-grow: 1; /* Allow paragraph to grow and fill space */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .events h2 {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+    .events p {
+        font-size: 1rem; /* Smaller font size for smaller screens */
+    }
+    .events .card {
+        flex: 1 1 100%; /* Stack cards on small screens */
+        margin: 10px 0; /* Reduce margin for smaller screens */
+        height: auto; /* Allow height to adjust on smaller screens */
+        
+    }
+    .events-cards{
+        display: flex;
+  flex-wrap: wrap; /* Allow wrapping of cards */
+  justify-content: center; /* Center cards in the flex container */
+    }
+}

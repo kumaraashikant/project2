@@ -1,0 +1,34 @@
+/* Loading Screen */
+.loading-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to right, #9aabff, #c4e7fa, #f7b3e4);
+    opacity: 1;
+    transition: opacity 2s ease-out; /* Smooth vanish effect */
+  }
+  
+  /* Larger logo animation */
+  .logo-animate {
+    width: 300px; /* Increased size */
+    animation: roll-in 2s ease-in-out;
+  }
+  
+  /* Keyframes for logo animation */
+  @keyframes roll-in {
+    0% {
+      transform: scale(0) rotate(360deg);
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
+    }
+  }
+  
+  /* Hidden state for smooth vanish */
+  .loading-screen.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s ease-out; /* Smooth fade-out transition */
+  }
+  

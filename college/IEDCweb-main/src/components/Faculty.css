@@ -1,0 +1,83 @@
+/* Faculty Section Styling */
+.faculty {
+  padding: 50px 0;
+  background: url('../assets/fact.png') no-repeat center center fixed;
+  background-size: cover; /* Ensures background fits any screen */
+  background-blend-mode: overlay;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hazy effect for the background */
+.faculty::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Add haziness to the background */
+  z-index: 1;
+}
+
+.faculty h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  font-weight: 600;
+  color: #fff; /* Make text visible against hazy background */
+  z-index: 2;
+  position: relative;
+}
+
+/* Faculty list with smooth scrolling and animation */
+.faculty-list {
+  display: flex;
+  overflow-x: auto; /* Horizontal scrolling */
+  gap: 20px;
+  padding: 10px;
+  scroll-behavior: smooth; /* Smooth scrolling */
+  scroll-snap-type: x mandatory; /* Snap into place */
+  z-index: 2;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+/* Hide scrollbar */
+.faculty-list::-webkit-scrollbar {
+  display: none;
+}
+
+.faculty-member {
+  flex: 0 0 auto; /* Prevent shrinking and allow auto width */
+  width: 250px; /* Fixed width for each faculty member */
+  scroll-snap-align: start; /* Snap alignment */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Hide overflow */
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly opaque background */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.faculty-member:hover {
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+.faculty-photo {
+  width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px 10px 0 0; /* Round top corners */
+}
+
+.faculty-member h3 {
+  text-align: center;
+  margin: 10px 0 5px;
+  font-size: 1.2em;
+  color: #333; /* Text color */
+}
+
+.faculty-member p {
+  text-align: center;
+  margin: 0;
+  color: #666; /* Text color */
+}

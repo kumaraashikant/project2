@@ -1,0 +1,74 @@
+.contact-us {
+  background: url('../assets/bg.jpg') no-repeat center center/cover;
+  padding: 60px 0; /* Increased padding to give more space */
+  text-align: center;
+  color: #fff; /* Ensure text stands out against background */
+  min-height: 100vh; /* Make the section take the full height of the viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-us h2 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.7); /* Add semi-transparent background for better contrast */
+  padding: 39px;
+  border-radius: 10px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #fff; /* White text for better visibility */
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #3fc03f;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d);
+
+  color: #fff; /* Change button text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%; /* Make button full width */
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .contact-us h2 {
+      font-size: 2rem;
+  }
+
+  .contact-form {
+      padding: 15px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+      padding: 8px;
+  }
+}

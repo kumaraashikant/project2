@@ -1,0 +1,412 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    align-items: center; /* Center the content in mobile view */
+    padding: 40px;
+  }
+
+  .subtitle {
+    font-size: 1.8rem; /* Slightly reduce font size */
+    text-align: center; /* Center the text */
+    margin-top: 10px;
+    white-space: normal; /* Allow text to wrap */
+    line-height: 1.3; /* Adjust line spacing for better readability */
+    max-width: 90%; /* Limit the width of the text so it breaks into two lines */
+  }
+
+  .text-logo-container {
+    align-items: center; /* Center the logo and text vertically */
+  }
+}
+
+@media (max-width: 480px) {
+  .subtitle {
+    font-size: 1.4rem; /* Further reduce font size for smaller screens */
+    text-align: center;
+    white-space: normal; /* Ensure text wraps on very small screens */
+    line-height: 1.2; /* Adjust line spacing for better fit */
+    max-width: 85%; /* Narrower width to ensure it breaks into two lines */
+  }
+
+  .hero {
+    padding: 20px;
+  }
+}
+
+/* Video Background */
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Logo and Text Section */
+.text-logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo-container {
+  width: 220px;
+  height: 220px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: linear-gradient(to bottom right, #001f3f, #5f3c91); /* Dark blue to violet */
+  overflow: visible;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+.logon {
+  width: 95%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+  animation: silverShine 3s infinite; /* Silver shine effect */
+}
+
+.logo-container::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border-radius: 50%;
+  z-index: 1;
+  background: radial-gradient(circle, rgba(238, 130, 238, 0.3), transparent 60%); /* Pink-Violet flame */
+  box-shadow: 0 0 30px 15px rgba(238, 130, 238, 0.6), 0 0 40px 20px rgba(255, 105, 180, 0.5); /* Violet and pink glow */
+  animation: flameEffect 2s infinite ease-in-out; /* Subtle flickering */
+}
+
+.subtitle {
+  font-size: 2.2rem;
+  font-family: 'Garamond', serif;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: left;
+  margin-top: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid rgba(255, 255, 255, 0.75); /* Simulates typing cursor */
+  animation: typing 4s steps(50, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgba(255, 255, 255, 0.75);
+  }
+}
+
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    align-items: center; /* Center the content in mobile view */
+    padding: 40px;
+  }
+
+  .logo-container {
+    width: 180px; /* Slightly reduce logo size for mobile */
+    height: 180px;
+  }
+
+  .subtitle {
+    font-size: 1.5rem; /* Adjust font size for mobile */
+    text-align: center; /* Center the text in mobile view */
+    margin-top: 10px;
+  }
+
+  .text-logo-container {
+    align-items: center; /* Center the logo and text vertically */
+  }
+}
+
+
+.logo-container {
+  width: 220px;
+  height: 220px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: linear-gradient(to bottom right, #001f3f, #5f3c91); /* Dark blue to violet */
+  overflow: visible;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+/* Logo Styling */
+.logon {
+  width: 95%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+  animation: silverShine 3s infinite; /* Silver shine effect */
+}
+
+/* Refined Violet-Pink Flame Effect */
+.logo-container::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border-radius: 50%;
+  z-index: 1;
+  background: radial-gradient(circle, rgba(238, 130, 238, 0.3), transparent 60%); /* Pink-Violet flame */
+  box-shadow: 0 0 30px 15px rgba(238, 130, 238, 0.6), 0 0 40px 20px rgba(255, 105, 180, 0.5); /* Violet and pink glow */
+  animation: flameEffect 2s infinite ease-in-out; /* Subtle flickering */
+}
+
+/* Animation for Flame Effect */
+@keyframes flameEffect {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+/* Spark Effect */
+.logo-container::after {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  right: -12px;
+  bottom: -12px;
+  border-radius: 50%;
+  z-index: 0;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 70%); /* White sparks */
+  box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.4), 0 0 15px 8px rgba(255, 192, 203, 0.5); /* Random spark colors */
+  animation: sparks 3s infinite linear alternate; /* Subtle random spark effect */
+}
+
+/* Animation for Sparks */
+@keyframes sparks {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1) rotate(20deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.8;
+  }
+}
+
+/* Silver Shine Effect for Logo */
+@keyframes silverShine {
+  0% {
+    background: none;
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: -30px 0px 60px 15px rgba(255, 255, 255, 0.7); /* Silver streak moving across */
+  }
+  100% {
+    background: none;
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0.2);
+  }
+}
+.subtitle {
+  white-space: pre-wrap; /* Ensure text wraps properly with line breaks */
+  display: inline-block; /* Prevent blocky transitions between lines */
+  animation: typing 0.5s steps(1) infinite; /* Remove the effect of blinking */
+}
+
+@keyframes typing {
+  from { border-right: 1px solid transparent; }
+  to { border-right: 1px solid transparent; }
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 2.2rem;
+  font-family: 'Garamond', serif;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: left;
+  margin-top: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid rgba(255, 255, 255, 0.75); /* Simulates typing cursor */
+  animation: typing 4s steps(50, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgba(255, 255, 255, 0.75);
+  }
+}
+@media (max-width: 768px) {
+  .subtitle {
+    font-size: 1.8rem; /* Adjust font size for mobile */
+    text-align: center; /* Center the text in mobile view */
+    margin-top: 10px;
+    white-space: normal; /* Allow text to wrap */
+    line-height: 1.3; /* Adjust line spacing for better readability */
+    max-width: 90%; /* Limit the width of the text so it breaks into two lines */
+  }
+}
+
+@media (max-width: 480px) {
+  .subtitle {
+    font-size: 1.4rem; /* Further reduce font size for smaller screens */
+    text-align: center;
+    white-space: normal; /* Ensure text wraps on very small screens */
+    line-height: 1.2; /* Adjust line spacing for better fit */
+    max-width: 85%; /* Narrower width to ensure it breaks into two lines */
+  }
+
+  .hero {
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+}
+
+/* Image Collage Layout */
+.image-collage {
+  display: flex;
+  align-items: center;
+}
+
+.ai-pattern {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 40px;
+}
+
+/* "A" Triangle */
+.a-triangle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.a-triangle .row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* "I" Column */
+.i-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+/* Image Styling */
+.collage-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 10%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  opacity: 0; /* Start as invisible */
+  transform: translateY(20px); /* Start slightly below */
+  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out; /* Smooth transition */
+}
+/* Adjustments for Mobile View */
+@media (max-width: 768px) {
+  .a-triangle {
+    gap: 5px; /* Reduce the gap between triangle elements */
+  }
+
+  .image-collage {
+    margin-top: 10px; /* Reduce the margin to bring the collage closer */
+  }
+}
+
+@media (max-width: 480px) {
+  .a-triangle {
+    gap: 2px; /* Further reduce the gap for very small screens */
+  }
+
+  .image-collage {
+    margin-top: 5px; /* Further reduce the margin for very small screens */
+  }
+}
+
+.collage-image.reveal {
+  opacity: 1; /* Become visible */
+  transform: translateY(0); /* Move to original position */
+}
+
+.collage-image:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 40px
+;
+  }
+
+  .image-collage {
+    margin-top: 20px;
+  }
+}

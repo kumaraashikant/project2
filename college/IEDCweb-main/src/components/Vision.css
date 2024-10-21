@@ -1,0 +1,51 @@
+/* Vision.css */
+.vision {
+  background: linear-gradient(to bottom, white, skyblue); /* Gradient background */
+  padding: 40px 0;
+  text-align: center;
+}
+
+.vision h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.vision .vision-cards {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping of cards */
+  justify-content: center; /* Center cards in the flex container */
+}
+
+.card {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 10px; /* Increased border-radius for a softer look */
+  padding: 20px;
+  margin: 20px; /* Increased margin for spacing */
+  width: 250px; /* Set a fixed width for consistency */
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: column; /* Stack image and text vertically */
+  align-items: center; /* Center contents */
+  position: relative; /* Position for pseudo-elements */
+  transition: transform 0.3s; /* Smooth scaling on hover */
+}
+
+/* Zigzag effect using nth-child */
+.card:nth-child(odd) {
+  margin-top: 30px; /* Extra margin to push odd cards down */
+}
+
+.card:nth-child(even) {
+  margin-bottom: 30px; /* Extra margin to push even cards up */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Card image styling */
+.card-image {
+  width: 100px; /* Set a fixed width for images */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px; /* Space between image and text */
+}
